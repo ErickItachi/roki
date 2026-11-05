@@ -70,18 +70,32 @@
       </button>
     </div>
 
-    <div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden>
-      <ul>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#como-funciona">Como funciona</a></li>
-        <li><a href="#fundadores">Quem somos</a></li>
-        <li><a href="#faq">Dúvidas</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-      <a href="#contato" class="btn btn--primary">Fale com a Roki</a>
-    </div>
   </header>
+
+  <div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden>
+    <nav aria-label="Menu">
+      <ol class="mobile-menu__list">
+          <li style="--i:0"><a href="#sobre"><span class="mobile-menu__num">01</span><span class="mobile-menu__label">Sobre</span><svg class="mobile-menu__arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 15 15 5M7 5h8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li style="--i:1"><a href="#servicos"><span class="mobile-menu__num">02</span><span class="mobile-menu__label">Serviços</span><svg class="mobile-menu__arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 15 15 5M7 5h8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li style="--i:2"><a href="#como-funciona"><span class="mobile-menu__num">03</span><span class="mobile-menu__label">Como funciona</span><svg class="mobile-menu__arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 15 15 5M7 5h8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li style="--i:3"><a href="#fundadores"><span class="mobile-menu__num">04</span><span class="mobile-menu__label">Quem somos</span><svg class="mobile-menu__arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 15 15 5M7 5h8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li style="--i:4"><a href="#faq"><span class="mobile-menu__num">05</span><span class="mobile-menu__label">Dúvidas</span><svg class="mobile-menu__arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 15 15 5M7 5h8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+          <li style="--i:5"><a href="#contato"><span class="mobile-menu__num">06</span><span class="mobile-menu__label">Contato</span><svg class="mobile-menu__arrow" viewBox="0 0 20 20" aria-hidden="true"><path d="M5 15 15 5M7 5h8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+      </ol>
+    </nav>
+    <div class="mobile-menu__footer">
+      <a href="#contato" class="btn btn--primary mobile-menu__cta">
+        Fale com a Roki
+        <svg class="btn__icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <div class="mobile-menu__social">
+        <a href="https://www.instagram.com/rokicontabilidade/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://br.linkedin.com/company/roki-contabilidade" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <p class="mobile-menu__tagline">Menos burocracia. Mais segurança. <em>Atendimento de verdade.</em></p>
+    </div>
+    <img class="mobile-menu__symbol" src="assets/brand/roki-simbolo.svg" alt="" aria-hidden="true">
+  </div>
 
   <main id="conteudo">
 
@@ -89,7 +103,7 @@
     <section class="hero" id="inicio">
       <div class="container hero__grid">
         <div class="hero__content">
-          <p class="eyebrow reveal">Contabilidade 100% online · desde 2022</p>
+          <p class="badge reveal"><span class="badge__dot" aria-hidden="true"></span>Contabilidade 100% online · desde 2022</p>
           <h1 class="hero__title">
             <span class="line"><span class="word">Menos</span> <span class="word">burocracia.</span></span>
             <span class="line"><span class="word">Mais</span> <span class="word">segurança.</span></span>
@@ -499,6 +513,12 @@
       </div>
     </div>
   </footer>
+
+  <a href="#contato" class="mobile-cta" data-mobile-cta aria-hidden="true" tabindex="-1">
+    <img src="assets/brand/roki-simbolo.svg" alt="" width="28" height="28">
+    <span>Fale com a Roki</span>
+    <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
 
   <script src="assets/js/main.js" defer></script>
 </body>

@@ -82,19 +82,39 @@
     toggle.setAttribute('aria-expanded', String(open));
     toggle.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
     document.body.style.overflow = open ? 'hidden' : '';
+    root.classList.toggle('menu-open', open);
     if (open) {
       menu.hidden = false;
-      header.classList.add('is-scrolled');
-      requestAnimationFrame(() => menu.classList.add('is-open'));
+      header.classList.remove('is-hidden');
+      requestAnimationFrame(() => requestAnimationFrame(() => menu.classList.add('is-open')));
+      setTimeout(() => { const first = menu.querySelector('a'); if (first && menuOpen) first.focus({ preventScroll: true }); }, 400);
     } else {
       menu.classList.remove('is-open');
-      setTimeout(() => { if (!menuOpen) menu.hidden = true; }, 350);
+      setTimeout(() => { if (!menuOpen) menu.hidden = true; }, reduceMotion ? 0 : 700);
     }
   }
   toggle.addEventListener('click', () => setMenu(!menuOpen));
+  // fecha e devolve o foco ao botão
   menu.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && menuOpen) setMenu(false); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && menuOpen) { setMenu(false); toggle.focus(); } });
   window.matchMedia('(min-width: 960px)').addEventListener('change', (e) => { if (e.matches && menuOpen) setMenu(false); });
+
+  /* ---------- CTA fixo no celular: aparece depois do topo, some no contato ---------- */
+  const mobileCta = document.querySelector('[data-mobile-cta]');
+  const contact = document.querySelector('#contato');
+  const hero = document.querySelector('.hero');
+  if (mobileCta && 'IntersectionObserver' in window) {
+    let pastHero = false, inContact = false;
+    const sync = () => {
+      const show = pastHero && !inContact && !menuOpen;
+      mobileCta.classList.toggle('is-visible', show);
+      mobileCta.setAttribute('aria-hidden', String(!show));
+      mobileCta.tabIndex = show ? 0 : -1;
+    };
+    new IntersectionObserver(([e]) => { pastHero = !e.isIntersecting; sync(); }).observe(hero);
+    new IntersectionObserver(([e]) => { inContact = e.isIntersecting; sync(); }, { rootMargin: '0px 0px -20% 0px' }).observe(contact);
+    toggle.addEventListener('click', () => setTimeout(sync, 0));
+  }
 
   /* ---------- Revelação ao rolar ---------- */
   const revealTargets = document.querySelectorAll('.reveal, .step, .hero__panel');
