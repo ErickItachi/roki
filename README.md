@@ -2,6 +2,10 @@
 
 Site institucional de página única, estático (HTML + CSS + JS puro, sem build).
 
+## Prévia online
+
+https://roki-contabilidade.vercel.app (projeto `roki-contabilidade` no Vercel, marcado com `noindex`, não aparece no Google).
+
 ## Rodar localmente
 
 ```bash
