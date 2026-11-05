@@ -34,7 +34,7 @@ Ainda faltam:
 | WhatsApp / e-mail | Não informados — o formulário direciona ao Instagram | objeto `CONTACT` em `assets/js/main.js` |
 | CNPJ / CRC | Não informados | rodapé em `index.html` |
 | Cargos dos sócios | "Sócio(a)-fundador(a)" — confirmar | seção `#fundadores` |
-| Domínio | `canonical` usa `rokicontabilidade.com.br` como suposição | `<head>` em `index.html` |
+| Domínio / indexação | Prévia com `noindex`; ao publicar, remover e adicionar `<link rel="canonical">` | `<head>` em `index.html` |
 
 Dados usados (LinkedIn e Instagram da Roki): fundada em 2022 em Mogi das Cruzes/SP, começou ajudando
 amigos com pendências jurídicas e contábeis, 100% online, clientes em mais de 5 estados, todos os portes
