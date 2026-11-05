@@ -26,7 +26,7 @@
   --font-sans: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-serif: "Instrument Serif", Georgia, serif;
 
-  --fs-display: clamp(2.75rem, 1.2rem + 6.4vw, 6.5rem);
+  --fs-display: clamp(2.75rem, 1.2rem + 5.2vw, 5.4rem);
   --fs-h2: clamp(2rem, 1.2rem + 3.2vw, 3.75rem);
   --fs-h3: clamp(1.15rem, 1rem + .5vw, 1.4rem);
   --fs-lead: clamp(1.08rem, 1rem + .35vw, 1.3rem);
@@ -190,7 +190,7 @@ em { font-family: var(--font-serif); font-style: italic; font-weight: 400; lette
   opacity: .55;
 }
 .hero__grid { display: grid; gap: 3.5rem; align-items: end; }
-@media (min-width: 1024px) { .hero__grid { grid-template-columns: 1.55fr 1fr; gap: 4rem; } }
+@media (min-width: 1024px) { .hero__grid { grid-template-columns: 1.7fr 1fr; gap: 3rem; } .hero__title .line { white-space: nowrap; } }
 
 .hero__title {
   margin: 1.5rem 0 2rem;
