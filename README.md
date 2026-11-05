@@ -24,25 +24,23 @@ Seções: Hero · Sobre · Serviços · Manifesto · Como funciona · Quem somos
 
 ## Pendências antes de publicar
 
-A pesquisa não conseguiu acessar o Instagram nem o LinkedIn da Roki (bloqueados no ambiente de
-desenvolvimento) e não encontrou fontes públicas alternativas. Por isso:
+A identidade visual (logo, vermelho e creme) foi aplicada a partir dos prints do Instagram e do LinkedIn.
+Ainda faltam:
 
 | Item | Situação | Onde ajustar |
 |---|---|---|
-| Paleta oficial | Provisória (azul-marinho + dourado discreto) | `--brand-*` em `assets/css/style.css` |
-| Tipografia oficial | Provisória (Manrope + Instrument Serif) | link do Google Fonts em `index.html` e `--font-*` |
-| Logotipo | Nome em texto; nenhuma logo foi criada | `assets/brand/` + bloco `.brand` |
+| Tipografia do site | Manrope + Instrument Serif (a logo usa letras próximas da Outfit) | link do Google Fonts em `index.html` e `--font-*` |
 | Foto de Roberto e Joyce | Espaço reservado | `assets/img/fundadores.jpg` + bloco `.photo-slot` |
 | WhatsApp / e-mail | Não informados — o formulário direciona ao Instagram | objeto `CONTACT` em `assets/js/main.js` |
 | CNPJ / CRC | Não informados | rodapé em `index.html` |
-| Lista de serviços | Baseada na descrição do LinkedIn fornecida no briefing | seção `#servicos` |
 | Cargos dos sócios | "Sócio(a)-fundador(a)" — confirmar | seção `#fundadores` |
 | Domínio | `canonical` usa `rokicontabilidade.com.br` como suposição | `<head>` em `index.html` |
 
-Dados usados (vindos do briefing, origem LinkedIn): fundada em 2022, origem em Mogi das Cruzes/SP,
-100% online, clientes em mais de cinco estados, diferentes portes e regimes, atuação em
-contabilidade, tributos, fiscal, Imposto de Renda e reforma tributária; frase
-"Menos burocracia. Mais segurança. Atendimento de verdade."
+Dados usados (LinkedIn e Instagram da Roki): fundada em 2022 em Mogi das Cruzes/SP, começou ajudando
+amigos com pendências jurídicas e contábeis, 100% online, clientes em mais de 5 estados, todos os portes
+e diferentes regimes; especializações: Contabilidade, Tributos, Fiscal, Imposto de Renda, Reforma
+Tributária e Atendimento Humanizado; "Atendimento em tempo real, rápido e sem burocracia";
+frase "Menos burocracia. Mais segurança. Atendimento de verdade."
 
 Nenhuma formação, registro profissional, número de clientes ou depoimento foi inventado.
 
