@@ -8,8 +8,8 @@
    * Se ambos ficarem vazios, o formulário orienta o visitante a usar o Instagram.
    */
   const CONTACT = {
-    whatsapp: '',
-    email: '',
+    whatsapp: '5511963778365', // Roberto Kaoru
+    email: 'contato@roki.com.br',
     instagram: 'https://www.instagram.com/rokicontabilidade/',
   };
 
